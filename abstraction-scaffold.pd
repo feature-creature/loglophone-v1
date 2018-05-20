@@ -1,0 +1,17 @@
+#N canvas 131 393 543 300 10;
+#X text 226 52 <-- translate midi to frequency (Hz);
+#X obj 18 233 outlet;
+#X obj 18 24 inlet;
+#X obj 64 24 inlet;
+#X obj 111 24 inlet;
+#X obj 111 52 mtof;
+#X obj 18 206 pack f f;
+#X obj 18 178 % 2;
+#X text 184 24 <-- channel num \, algorithm num \, midi value;
+#X text 215 178 <-- modulo to determine L or R Channel;
+#X connect 2 0 7 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X coords 0 300 1 299 85 60 0;
